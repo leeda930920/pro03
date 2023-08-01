@@ -61,7 +61,7 @@ public class GetFestivalCtrl extends HttpServlet {
 		request.setAttribute("user", user);
 		
 		//디스패치로 view를 생성하여 getNotice.jsp로 요청 받은 noti를 포워드
-		RequestDispatcher view2 = request.getRequestDispatcher("/WEB-INF/festival/getFestival.jsp");
+		RequestDispatcher view2 = request.getRequestDispatcher("/festival/getFestival.jsp");
 		view2.forward(request, response);
 
 		

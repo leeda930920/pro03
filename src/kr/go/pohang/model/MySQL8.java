@@ -34,6 +34,7 @@ public class MySQL8 {
 	
 	//공지사항
 	final static String NOTICE_SELECT_ALL = "select * from notice order by idx desc";
+	final static String LATEST_NOTICE_SELECT = "select * from notice order by idx desc limit 5";
 	final static String NOTICE_SELECT_ONE = "select * from notice where idx=?";
 	final static String NOTICE_READCOUNT_UPDATE = "update notice set readcnt=readcnt+1 where idx=?";
 	final static String INSERT_NOTICE = "insert into notice(title,content,author,file1,resdate,readcnt,ncate) values (?, ?, ?, ?, default, default, default)";

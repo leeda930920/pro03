@@ -38,7 +38,7 @@ public class UpdateFestivalCtrl extends HttpServlet {
 		request.setAttribute("noti", fes);
 		
 
-		RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/festival/updateFestival.jsp");
+		RequestDispatcher view = request.getRequestDispatcher("/festival/updateFestival.jsp");
 		view.forward(request, response);
 	}
 }

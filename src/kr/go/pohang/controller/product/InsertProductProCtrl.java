@@ -1,7 +1,6 @@
 package kr.go.pohang.controller.product;
 
 import java.io.IOException;
-import java.util.Enumeration;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
@@ -13,7 +12,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import kr.go.pohang.dto.Product;
 import kr.go.pohang.model.ProductDAO;
-
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 

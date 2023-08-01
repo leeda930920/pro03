@@ -34,7 +34,7 @@ public class AddQnaProCtrl extends HttpServlet {
 			String msg = "질문이 등록되지 못했습니다.";
 			request.setAttribute("msg", msg);
 			
-			RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/qna/addQna.jsp");
+			RequestDispatcher view = request.getRequestDispatcher("/qna/addQna.jsp");
 			view.forward(request, response);
 		} else { //질문하기 성공
 			response.sendRedirect("QnaList.do");

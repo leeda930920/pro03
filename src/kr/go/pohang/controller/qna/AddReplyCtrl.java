@@ -30,7 +30,7 @@ public class AddReplyCtrl extends HttpServlet {
 		request.setAttribute("qna", qna);
 		
 		//디스패치로 view를 생성하여 noticeList.jsp로 요청 받은 notiList를 포워드
-		RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/qna/addReply.jsp");
+		RequestDispatcher view = request.getRequestDispatcher("/qna/addReply.jsp");
 		view.forward(request, response);
 	}
 

@@ -34,6 +34,7 @@ public class QnaDAO {
 		}
 		
 		int tmp = Integer.parseInt(qno) + 1;
+
 		if(qno=="00000000"){
 			qno = "0000000" + tmp;
 		} else if(tmp>=10000000){

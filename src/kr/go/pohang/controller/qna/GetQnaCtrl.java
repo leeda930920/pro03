@@ -33,7 +33,7 @@ public class GetQnaCtrl extends HttpServlet {
 		request.setAttribute("qnaList", qnaList);
 		
 		//디스패치로 view를 생성하여 noticeList.jsp로 요청 받은 notiList를 포워드
-		RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/qna/getQna.jsp");
+		RequestDispatcher view = request.getRequestDispatcher("/qna/getQna.jsp");
 		view.forward(request, response);
 	}
 }

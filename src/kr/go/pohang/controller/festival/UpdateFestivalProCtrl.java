@@ -23,7 +23,7 @@ public class UpdateFestivalProCtrl extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html; charset=UTF-8");
 		
-		String savePath = "/data";	
+		String savePath = "/festival/img";	
 		int uploadFileSizeLimit = 10 * 1024 * 1024;	
 		String encType = "UTF-8";		
 		ServletContext context = getServletContext();	
@@ -34,13 +34,13 @@ public class UpdateFestivalProCtrl extends HttpServlet {
 		String title = "";
 		String content = "";
 		String author = "";
-		String fileName = "";
+		String file1 = "";
 		int idx = 0;
 		try {
 			MultipartRequest multi = new MultipartRequest(request, uploadFilePath, 
 					uploadFileSizeLimit, encType, new DefaultFileRenamePolicy());
-			fileName = multi.getFilesystemName("file1"); 
-			if (fileName == null) { 
+			file1 = multi.getFilesystemName("file1"); 
+			if (file1 == null) { 
 				System.out.print("파일 업로드 실패~!");
 			}  
 			idx = Integer.parseInt(multi.getParameter("idx"));
@@ -56,7 +56,7 @@ public class UpdateFestivalProCtrl extends HttpServlet {
 		fes.setIdx(idx);
 		fes.setTitle(title);
 		fes.setContent(content);
-		fes.setFile1(fileName);
+		fes.setFile1(file1);
 		fes.setAuthor(author);
 		int cnt = ndao.updateFestivalPro(fes);	
 		if(cnt==0){ 

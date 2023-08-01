@@ -105,7 +105,7 @@ public class FestivalDAO {
 			pstmt.setString(1, fes.getTitle());
 			pstmt.setString(2, fes.getContent());
 			pstmt.setString(3, fes.getAuthor());
-			pstmt.setString(4, "data/"+fes.getFile1());
+			pstmt.setString(4, fes.getFile1());
 			cnt = pstmt.executeUpdate();
 		} catch (ClassNotFoundException e) { //오라클 JDBC 클래스가 없거나 경로가 다른 경우 발생
 			e.printStackTrace();

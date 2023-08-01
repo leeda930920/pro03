@@ -18,7 +18,7 @@ public class InsertFestivalCtrl extends HttpServlet {
 		request.setAttribute("msg", msg);
 		
 		//디스패치로 view를 생성하여 noticeList.jsp로 요청 받은 notiList를 포워드
-		RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/festival/insertFestival.jsp");
+		RequestDispatcher view = request.getRequestDispatcher("/festival/insertFestival.jsp");
 		view.forward(request, response);
 	}
 }

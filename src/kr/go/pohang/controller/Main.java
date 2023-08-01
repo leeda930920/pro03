@@ -27,14 +27,21 @@ public class Main extends HttpServlet {
 		application.setAttribute("realPath", realPath);
 		
 		NoticeDAO ndao = new NoticeDAO();
-		ArrayList<Notice> notiList = new ArrayList<Notice>();
-		notiList = ndao.noticeListAll();
+		ArrayList<Notice> notiList = ndao.noticeListAll();
 		request.setAttribute("notiList", notiList);
 		
+		latest(request, response);
 		
 		//메인 페이지 포워딩
 		request.setAttribute("projectName", projectName);
-		RequestDispatcher view = request.getRequestDispatcher("/index.jsp");
+		
+		RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/index.jsp");
 		view.forward(request, response);
+	}
+	
+	public void latest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		NoticeDAO ndao = new NoticeDAO();
+		ArrayList<Notice> notiList = ndao.noticeListAll();
+		request.setAttribute("notiList", notiList);
 	}
 }

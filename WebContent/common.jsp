@@ -17,13 +17,6 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
 
-      
-
-
-
-
-
-
 <style>
 body, html { font-family: 'Noto Sans KR', sans-serif; }
 ul { list-style:none; }
@@ -32,7 +25,7 @@ img { border: none; }
 #logo2 { display:block; max-height:90px; min-height:60px; }
 #logo2 img { display:block; max-height:70px; min-height:60px; }
 #nav-group { border-bottom:1px solid #ddd;}
-#gnb .navbar-link { font-size: 19px; }
+#gnb .navbar-link { font-size: 17px; }
 #gnb .navbar-link::after { content:""; display:none; }
 #sidebar .navbar { display:block; width:100%; background-color:transparent; }
 #sidebar .navbar-item { float:none; clear:both; display:block; width:100%; }
@@ -85,14 +78,10 @@ background-repeat:no-repeat; background-position:left center; background-size:10
 #page3 .page_wrap {text-align: center;}
 #page4 .page_wrap {text-align: center;}
 
-#fnb { width:1000px; margin: 0px auto; }
-#f_addr { color: #FFFFFF; display: block; margin-bottom: 0.5em; line-height: 2;}
-#f_copy { color: #c9d0e1; display: block; font-size: .75em; letter-spacing: 0.07em;}
-
-
-
-
-
-
+#caption a:hover {color: #363636;}
+#fnb { width:1400px; margin: 0px auto; }
+#fnb a:hover { color: #FFFFFF;}
+#f_addr { color: #FFFFFF; font-size: 13px; display: block; margin-top: 1em; margin-bottom: 0.2em; line-height: 2;}
+#f_copy { color: #c9d0e1; font-size: 11px; display: block; margin-top:0px; letter-spacing: 0.07em; padding-bottom: 1em;}
 
 </style>

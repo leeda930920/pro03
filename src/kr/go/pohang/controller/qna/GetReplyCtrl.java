@@ -29,7 +29,7 @@ public class GetReplyCtrl extends HttpServlet {
 		request.setAttribute("qn", qn);
 		
 		//디스패치로 view를 생성하여 noticeList.jsp로 요청 받은 notiList를 포워드
-		RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/qna/getReply.jsp");
+		RequestDispatcher view = request.getRequestDispatcher("/qna/getReply.jsp");
 		view.forward(request, response);
 	}
 }

@@ -22,7 +22,7 @@ public class InsertFestivalProCtrl extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html; charset=UTF-8");
-		String savePath = "/WEB-INF/festival/img";	
+		String savePath = "/festival/img";	
 		int uploadFileSizeLimit = 10 * 1024 * 1024;	
 		String encType = "UTF-8";		
 		ServletContext context = getServletContext();	
@@ -33,18 +33,17 @@ public class InsertFestivalProCtrl extends HttpServlet {
 		String title = "";
 		String content = "";
 		String author = "";
-		String fileName = "";
+		String file1 = "";
 		FestivalDAO ndao = new FestivalDAO();
 		Festival fes = new Festival();
-		
 		try {
 			MultipartRequest multi = new MultipartRequest(request, uploadFilePath, 
 					uploadFileSizeLimit, encType, new DefaultFileRenamePolicy());
-			fileName = multi.getFilesystemName("file1"); 
-			if (fileName == null) { 
+			file1 = multi.getFilesystemName("file1"); 
+			if (file1 == null) { 
 				System.out.print("파일 업로드 실패~!");
 			} else {
-				fes.setFile1("img/"+fileName);
+				fes.setFile1("img/"+file1);
 			}
 			author = multi.getParameter("author");
 			title = multi.getParameter("title");
@@ -59,7 +58,7 @@ public class InsertFestivalProCtrl extends HttpServlet {
 		if(cnt==0){ 
 			String msg = "공지사항을 글이 등록되지 못했습니다.";
 			request.setAttribute("msg", msg);
-			RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/festival/insertFestival.jsp");
+			RequestDispatcher view = request.getRequestDispatcher("/festival/insertFestival.jsp");
 			view.forward(request, response);
 		} else { 
 			response.sendRedirect("FestivalList.do");

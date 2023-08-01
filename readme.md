@@ -20,7 +20,7 @@
 
 ## 자바스크립트 플러그인: JQuery
 
-## 자바스크립트 api: daum 주소 api, json 데이터 처리, iamport 결제 api
+## 자바스크립트 api: json 데이터 처리, iamport 결제 api
 
 ## 프로젝트 데이터 처리 패턴: MVC2(View -> Controller -> Model -> Controller -> View)
 
@@ -74,3 +74,6 @@
 
 # 프로젝트 구성
 ![포항문화관광 프로젝트 구성도](./img/pro03.png "포항문화관광 프로젝트 구성도")
+***
+### 프로젝트(프로토타입)
+[pro03(사전시연영상).mp4](pro03_prototype.mp4)

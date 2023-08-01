@@ -24,7 +24,7 @@ public class GetFestivalListCtrl extends HttpServlet {
 		request.setAttribute("fesList", fesList);
 		
 		//디스패치로 view를 생성하여 noticeList.jsp로 요청 받은 notiList를 포워드
-		RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/festival/festivalList.jsp");
+		RequestDispatcher view = request.getRequestDispatcher("/festival/festivalList.jsp");
 		view.forward(request, response);
 	
 	}

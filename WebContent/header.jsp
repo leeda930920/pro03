@@ -65,7 +65,7 @@
 					     <a class="navbar-item" href="${path2 }/MemberList.do">
 					     	회원관리
 					     </a>
-					     <a class="navbar-item" href="${path2 }/admin/noticeList.do">
+					     <a class="navbar-item" href="${path2 }/NoticeList.do">
 					       	글 관리
 					     </a>
 				    </div>

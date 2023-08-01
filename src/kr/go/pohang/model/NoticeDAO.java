@@ -49,6 +49,8 @@ public class NoticeDAO {
 		return notiList;
 	}
 	
+	
+	
 	public Notice getNotice(int idx){
 		updateReadCount(idx);
 		Notice noti = new Notice();
